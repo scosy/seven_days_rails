@@ -1,0 +1,22 @@
+<table class="table">
+	<thead>
+		<th></th>
+		<th>Field_1</th>
+		<th>Field_2</th>
+		<th>Field_3</th>
+		<th>Field_4</th>
+		<th>Field_5</th>
+		<th>Field_6</th>
+	</thead>
+	<% @entries.each do |entry| %>
+		<tr>
+			<td><%= entry.id %></td>
+			<td><%= entry.field_1 %></td>
+			<td><%= entry.field_2 %></td>
+			<td><%= entry.field_3 %></td>
+			<td><%= entry.field_4 %></td>
+			<td><%= entry.field_5 %></td>
+			<td><%= entry.field_6 %></td>
+		</tr>
+	<% end %>
+</table>
