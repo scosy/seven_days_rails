@@ -1,22 +1,15 @@
-<table class="table">
-	<thead>
-		<th></th>
-		<th>Field_1</th>
-		<th>Field_2</th>
-		<th>Field_3</th>
-		<th>Field_4</th>
-		<th>Field_5</th>
-		<th>Field_6</th>
-	</thead>
-	<% @entries.each do |entry| %>
-		<tr>
-			<td><%= entry.id %></td>
-			<td><%= entry.field_1 %></td>
-			<td><%= entry.field_2 %></td>
-			<td><%= entry.field_3 %></td>
-			<td><%= entry.field_4 %></td>
-			<td><%= entry.field_5 %></td>
-			<td><%= entry.field_6 %></td>
-		</tr>
+<div class="flex flex-row justify-around">
+	<h1><%= @today.strftime("%A %-m %B") %></h1>
+	<button class="primary-button">New Entry</button>
+</div>
+<div class="flex flex-column justify-around align-items-center mt-50">
+	<% if @entries.empty? %>
+		<h3>No entries</h3>
+	<% else %>
+		<% @entries.each do |entry| %>
+			<div class="entry">
+				<%= link_to "Journal entry ##{entry.id}", edit_entry_path(entry) %>
+			</div>
+		<% end %>
 	<% end %>
-</table>
+</div>
