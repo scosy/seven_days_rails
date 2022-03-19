@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_19_100339) do
-  create_table "entries", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_03_19_103841) do
+  create_table "journal_entries", force: :cascade do |t|
     t.text "field_1"
     t.text "field_2"
     t.text "field_3"
