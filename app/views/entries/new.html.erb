@@ -1,0 +1,22 @@
+<h1>New Entry for <%=@today.strftime('%a %-d %B')%></h1>
+
+<%= form_with url: "/entries", method: :post, class: 'flex flex-column entry-form' do |form| %>
+	<h2>Morning</h2>
+
+	<%= form.label :field_1, "3 things I'm grateful for :" %><br>
+	<%= form.text_area :field_1 %><br>
+	<%= form.label :field_2, "3 positive affirmations :" %><br>
+	<%= form.text_area :field_2 %><br>
+	<%= form.label :field_3, "What's my main focus right now ? :" %><br>
+	<%= form.text_area :field_3 %><br>
+
+<h2>Evening</h2>
+	
+	<%= form.label :field_4, "3 things that were positive today :" %><br>
+	<%= form.text_area :field_4 %><br>
+	<%= form.label :field_5, "1 thing I could have done better :" %><br>
+	<%= form.text_area :field_5 %><br>
+	<%= form.label :field_6, "3 things I wanna accomplish tomorrow :" %><br>
+	<%= form.text_area :field_6 %><br>
+	<%= form.submit "Submit", class:'primary-button full-button' %>
+<% end %>

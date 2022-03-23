@@ -1,6 +1,8 @@
 <div class="flex flex-row justify-around">
 	<h1><%= @today.strftime("%A %-m %B") %></h1>
-	<button class="primary-button">New Entry</button>
+	<%= link_to '/entries/new' do %>
+		<button class="primary-button">New Entry</button>
+	<% end %>
 </div>
 <div class="flex flex-column justify-around align-items-center mt-50">
 	<% if @entries.empty? %>
